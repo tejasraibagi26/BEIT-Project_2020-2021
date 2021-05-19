@@ -1,0 +1,82 @@
+name,category,foodid,cost,image
+Upma,Breakfast,1,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Poha,Breakfast,2,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Medu Wada,Breakfast,3,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Idli Sambar,Breakfast,4,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Masala Dosa,Breakfast,5,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Mysore Masala Dosa,Breakfast,6,40,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Mysore Dosa,Breakfast,7,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Dosa,Breakfast,8,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Vada Pav,Breakfast,9,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Misal Pav,Breakfast,10,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Maggie,Breakfast,11,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Vada Misal,Breakfast,12,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Onion Uttappa,Breakfast,13,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Tomato Uttappa,Breakfast,14,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Pani Puri,Chaat,15,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Ragda Puri,Chaat,16,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Dahi Puri,Chaat,17,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Shev Puri,Chaat,18,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Sukka Bhel Puri,Chaat,19,15,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Gila Bhel Puri,Chaat,20,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg fried rice,Chinese,21,45,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Manchurian fried rice,Chinese,22,60,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Schezwan fried rice,Chinese,23,50,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Shelpa rice,Chinese,24,100,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Triple schezwan rice,Chinese,25,80,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Hakka noodles,Chinese,26,45,https://odrista.s3.amazonaws.com/y9DpT.jpg
+manchurian Hakka noodles,Chinese,27,60,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Triple schezwan Hakka noodle,Chinese,28,80,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Manchow Soup,Chinese,29,40,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Manchurian Balls,Chinese,30,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Chinese Bhel,Chinese,31,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Dal Rice,Lunch,32,30,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Masala Rice,Lunch,33,50,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Lunch Plate,Lunch,34,50,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Chole Puri,Lunch,35,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Dal Khichadi,Lunch,36,50,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Pav Bhaji,Lunch,37,50,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Sandwich,Sandwich,38,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Toast Sandwich,Sandwich,39,30,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Grilled Sandwich,Sandwich,40,45,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Cheese Sandwich,Sandwich,41,55,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Mayonnaise Sandwich,Sandwich,42,55,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Club Sandwich,Sandwich,43,60,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Bread Butter,Sandwich,44,15,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Masala Sandwich,Sandwich,45,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Jam Bread,Sandwich,46,15,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Cheese Mayonnaise Sandwich,Sandwich,47,70,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Grilled cheese Mayonnaise Sandwich,Sandwich,48,70,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Chaas,Beverages,49,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Tea,Beverages,50,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Coffee,Beverages,51,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Cold Coffee,Beverages,52,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Oreo Milkshake,Beverages,53,30,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Lemon Tea,Beverages,54,15,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Lemon Ice Tea,Beverages,55,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Ginger Tea,Beverages,56,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Masala Tea,Beverages,57,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Chocolate Coffee,Beverages,58,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Pepsi,Beverages,59,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Coca Cola,Beverages,60,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Thumbs Up,Beverages,61,20,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Lemon Juice,Beverages,62,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Appy,Beverages,63,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Frooti,Beverages,64,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Mazza,Beverages,65,10,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Frankie,Frankie,66,25,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg  Schezwan Frankie,Frankie,67,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Paneer Frankie,Frankie,68,40,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Paneer Cheese Frankie,Frankie,69,45,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Paneer Schezwan Frankie,Frankie,70,45,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg cheese Frankie,Frankie,71,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Noodle Frankie,Frankie,72,40,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Noodle cheese Frankie,Frankie,73,50,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Noodle Manchurian Frankie,Frankie,74,55,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Noodle Mayonnaise Frankie,Frankie,75,55,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Overload Frankie,Frankie,76,70,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Manchurian Frankie,Frankie,77,35,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg manchurian cheese Frankie,Frankie,78,40,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Schezwan Manchurian Frankie ,Frankie,79,40,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Paneer cheese Mayonnaise Frankie,Frankie,80,50,https://odrista.s3.amazonaws.com/y9DpT.jpg
+Veg Noodle cheese Mayonnaise Frankie,Frankie,81,50,https://odrista.s3.amazonaws.com/y9DpT.jpg

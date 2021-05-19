@@ -1,0 +1,63 @@
+PODS:
+  - Flutter (1.0.0)
+  - flutter_barcode_scanner (1.0.2):
+    - Flutter
+  - flutter_socket_io (0.0.1):
+    - Flutter
+  - fluttertoast (0.0.2):
+    - Flutter
+    - Toast
+  - razorpay-pod (1.1.12)
+  - razorpay_flutter (1.1.10):
+    - Flutter
+    - razorpay-pod
+  - shared_preferences (0.0.1):
+    - Flutter
+  - Toast (4.0.0)
+  - url_launcher (0.0.1):
+    - Flutter
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - flutter_barcode_scanner (from `.symlinks/plugins/flutter_barcode_scanner/ios`)
+  - flutter_socket_io (from `.symlinks/plugins/flutter_socket_io/ios`)
+  - fluttertoast (from `.symlinks/plugins/fluttertoast/ios`)
+  - razorpay_flutter (from `.symlinks/plugins/razorpay_flutter/ios`)
+  - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
+  - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
+
+SPEC REPOS:
+  trunk:
+    - razorpay-pod
+    - Toast
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  flutter_barcode_scanner:
+    :path: ".symlinks/plugins/flutter_barcode_scanner/ios"
+  flutter_socket_io:
+    :path: ".symlinks/plugins/flutter_socket_io/ios"
+  fluttertoast:
+    :path: ".symlinks/plugins/fluttertoast/ios"
+  razorpay_flutter:
+    :path: ".symlinks/plugins/razorpay_flutter/ios"
+  shared_preferences:
+    :path: ".symlinks/plugins/shared_preferences/ios"
+  url_launcher:
+    :path: ".symlinks/plugins/url_launcher/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  flutter_barcode_scanner: fc42adac0732eca7bd9d3d676b215bce5903f269
+  flutter_socket_io: fce27977d95a82c181bd959180f33384f51a5973
+  fluttertoast: 6122fa75143e992b1d3470f61000f591a798cc58
+  razorpay-pod: e2e8cf25aea59eef51c6851716f188df71adab86
+  razorpay_flutter: 84b3bfd206ae9c9c2a9ba585524a1b3d8102b6c1
+  shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
+  url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
+
+PODFILE CHECKSUM: 4e8f8b2be68aeea4c0d5beb6ff1e79fface1d048
+
+COCOAPODS: 1.10.1

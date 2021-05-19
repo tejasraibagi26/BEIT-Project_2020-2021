@@ -1,0 +1,29 @@
+com/itsclicking/clickapp/fluttersocketio/SocketListener.java
+ com.itsclicking.clickapp.fluttersocketio.SocketListener
+ com.itsclicking.clickapp.fluttersocketio.SocketListener$1
+com/itsclicking/clickapp/fluttersocketio/FlutterSocketIoPlugin.java
+ com.itsclicking.clickapp.fluttersocketio.FlutterSocketIoPlugin
+com/itsclicking/clickapp/fluttersocketio/SocketIO.java
+ com.itsclicking.clickapp.fluttersocketio.SocketIO
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$1
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$10
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$11
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$2
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$3
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$4
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$5
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$6
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$7
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$8
+ com.itsclicking.clickapp.fluttersocketio.SocketIO$9
+com/itsclicking/clickapp/fluttersocketio/BuildConfig.java
+ com.itsclicking.clickapp.fluttersocketio.BuildConfig
+com/itsclicking/clickapp/fluttersocketio/ISocketIOManager.java
+ com.itsclicking.clickapp.fluttersocketio.ISocketIOManager
+com/itsclicking/clickapp/fluttersocketio/Utils.java
+ com.itsclicking.clickapp.fluttersocketio.Utils
+ com.itsclicking.clickapp.fluttersocketio.Utils$1
+com/itsclicking/clickapp/fluttersocketio/SocketIOManager.java
+ com.itsclicking.clickapp.fluttersocketio.SocketIOManager
+ com.itsclicking.clickapp.fluttersocketio.SocketIOManager$MethodCallArgumentsName
+ com.itsclicking.clickapp.fluttersocketio.SocketIOManager$MethodCallName

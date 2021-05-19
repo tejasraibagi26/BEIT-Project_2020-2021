@@ -1,0 +1,10 @@
+{
+  "jwtPrivateKey": "",
+  "pgURL": "ec2-3-211-245-154.compute-1.amazonaws.com",
+  "pgPort": "5432",
+  "pgDb": "d2l1afh7snp304",
+  "pgUser": "ltaxpvxfnjuqmu",
+  "pgPassword": "4ad32a5069632a934736a0338157b0c0bbbf08bf0a3ab8bb0de290d342f2e810",
+  "PORT": "3000",
+  "NODE_ENV": "production"
+}

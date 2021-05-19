@@ -1,0 +1,381 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 13.2 (Ubuntu 13.2-1.pgdg20.04+1)
+-- Dumped by pg_dump version 13.1
+
+-- Started on 2021-05-17 14:24:17 IST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- TOC entry 200 (class 1259 OID 3919990)
+-- Name: Menu; Type: TABLE; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+CREATE TABLE public."Menu" (
+    dishid bigint NOT NULL,
+    dishname character varying(255) NOT NULL,
+    dishcost integer NOT NULL,
+    dishtag character varying(255) NOT NULL,
+    dishimage character varying(255),
+    image bytea
+);
+
+
+ALTER TABLE public."Menu" OWNER TO ltaxpvxfnjuqmu;
+
+--
+-- TOC entry 203 (class 1259 OID 4401833)
+-- Name: favourite; Type: TABLE; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+CREATE TABLE public.favourite (
+    userid integer NOT NULL,
+    itemname character varying(255) NOT NULL,
+    itemurl character varying(255),
+    cost integer,
+    tag character varying(255),
+    id character varying(255)
+);
+
+
+ALTER TABLE public.favourite OWNER TO ltaxpvxfnjuqmu;
+
+--
+-- TOC entry 204 (class 1259 OID 4409424)
+-- Name: food_feedback; Type: TABLE; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+CREATE TABLE public.food_feedback (
+    feedback_id character varying(255) NOT NULL,
+    feedback_title character varying(255),
+    feedback_body character varying(255),
+    userid integer,
+    time_stamp timestamp without time zone
+);
+
+
+ALTER TABLE public.food_feedback OWNER TO ltaxpvxfnjuqmu;
+
+--
+-- TOC entry 202 (class 1259 OID 3928919)
+-- Name: orders; Type: TABLE; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+CREATE TABLE public.orders (
+    orderid character varying(255) NOT NULL,
+    userid integer NOT NULL,
+    cost integer NOT NULL,
+    payment character varying(255) NOT NULL,
+    orders character varying[] DEFAULT ARRAY[]::character varying[] NOT NULL,
+    completed boolean,
+    time_stamp timestamp without time zone,
+    order_date character varying,
+    feedback double precision,
+    feedback_status boolean DEFAULT false
+);
+
+
+ALTER TABLE public.orders OWNER TO ltaxpvxfnjuqmu;
+
+--
+-- TOC entry 205 (class 1259 OID 7085703)
+-- Name: server_msg; Type: TABLE; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+CREATE TABLE public.server_msg (
+    msg_title character varying(255) NOT NULL,
+    msg_body character varying(255) NOT NULL,
+    msg_author character varying(255) NOT NULL,
+    msg_time timestamp without time zone,
+    msg_id character varying(255) NOT NULL,
+    msg_link character varying(255)
+);
+
+
+ALTER TABLE public.server_msg OWNER TO ltaxpvxfnjuqmu;
+
+--
+-- TOC entry 201 (class 1259 OID 3926481)
+-- Name: users; Type: TABLE; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+CREATE TABLE public.users (
+    userid integer NOT NULL,
+    password character varying(255) NOT NULL,
+    role character varying(255) NOT NULL,
+    email character varying(255),
+    verified boolean DEFAULT false,
+    otp integer,
+    otp_time timestamp without time zone,
+    wallet integer DEFAULT 0
+);
+
+
+ALTER TABLE public.users OWNER TO ltaxpvxfnjuqmu;
+
+--
+-- TOC entry 4005 (class 0 OID 3919990)
+-- Dependencies: 200
+-- Data for Name: Menu; Type: TABLE DATA; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+COPY public."Menu" (dishid, dishname, dishcost, dishtag, dishimage, image) FROM stdin;
+10	Misal Pav	25	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+4	Idli Sambar	25	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+2	Poha	25	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+9	Vada Pav	10	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+8	Dosa	25	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+5	Masala Dosa	35	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+6	Mysore Masala Dosa	40	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+1	Upma	25	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+3	Medu Wada	25	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+7	Mysore Dosa	35	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+12	Vada Misal	20	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+11	Maggie	20	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+13	Onion Uttappa	35	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+14	Tomato Uttappa	35	Breakfast	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+15	Pani Puri	20	Chaat	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+16	Ragda Puri	20	Chaat	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+17	Dahi Puri	20	Chaat	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+18	Shev Puri	20	Chaat	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+19	Sukka Bhel Puri	15	Chaat	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+20	Gila Bhel Puri	20	Chaat	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+22	Manchurian fried rice	60	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+21	Veg fried rice	45	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+23	Schezwan fried rice	50	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+24	Shelpa rice	100	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+25	Triple schezwan rice	80	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+27	manchurian Hakka noodles	60	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+26	Hakka noodles	45	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+28	Triple schezwan Hakka noodle	80	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+29	Manchow Soup	40	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+30	Manchurian Balls	20	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+31	Chinese Bhel	25	Chinese	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+32	Dal Rice	30	Lunch	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+33	Masala Rice	50	Lunch	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+34	Lunch Plate	50	Lunch	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+35	Chole Puri	35	Lunch	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+37	Pav Bhaji	50	Lunch	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+36	Dal Khichadi	50	Lunch	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+38	Veg Sandwich	25	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+39	Toast Sandwich	30	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+40	Grilled Sandwich	45	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+41	Cheese Sandwich	55	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+42	Mayonnaise Sandwich	55	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+43	Club Sandwich	60	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+44	Bread Butter	15	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+47	Cheese Mayonnaise Sandwich	70	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+46	Jam Bread	15	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+45	Masala Sandwich	25	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+48	Grilled cheese Mayonnaise Sandwich	70	Sandwich	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+49	Chaas	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+50	Tea	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+51	Coffee	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+52	Cold Coffee	20	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+53	Oreo Milkshake	30	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+54	Lemon Tea	15	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+55	Lemon Ice Tea	20	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+57	Masala Tea	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+56	Ginger Tea	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+58	Chocolate Coffee	20	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+59	Pepsi	20	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+61	Thumbs Up	20	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+62	Lemon Juice	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+60	Coca Cola	20	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+63	Appy	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+64	Frooti	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+65	Mazza	10	Beverages	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+67	Veg  Schezwan Frankie	35	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+66	Veg Frankie	25	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+68	Veg Paneer Frankie	40	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+69	Veg Paneer Cheese Frankie	45	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+70	Veg Paneer Schezwan Frankie	45	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+71	Veg cheese Frankie	35	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+72	Veg Noodle Frankie	40	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+73	Veg Noodle cheese Frankie	50	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+74	Veg Noodle Manchurian Frankie	55	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+77	Veg Manchurian Frankie	35	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+75	Veg Noodle Mayonnaise Frankie	55	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+78	Veg manchurian cheese Frankie	40	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+79	Veg Schezwan Manchurian Frankie 	40	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+80	Veg Paneer cheese Mayonnaise Frankie	50	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+81	Veg Noodle cheese Mayonnaise Frankie	50	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+76	Veg Overload Frankie	70	Frankie	https://odrista.s3.amazonaws.com/y9DpT.jpg	\N
+\.
+
+
+--
+-- TOC entry 4008 (class 0 OID 4401833)
+-- Dependencies: 203
+-- Data for Name: favourite; Type: TABLE DATA; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+COPY public.favourite (userid, itemname, itemurl, cost, tag, id) FROM stdin;
+10001000	Misal Pav	https://odrista.s3.amazonaws.com/y9DpT.jpg	25	Breakfast	10
+10001000	Idli Sambar	https://odrista.s3.amazonaws.com/y9DpT.jpg	25	Breakfast	4
+10001000	Poha	https://odrista.s3.amazonaws.com/y9DpT.jpg	25	Breakfast	2
+10001004	Misal Pav	https://odrista.s3.amazonaws.com/y9DpT.jpg	25	Breakfast	10
+10001004	Idli Sambar	https://odrista.s3.amazonaws.com/y9DpT.jpg	25	Breakfast	4
+\.
+
+
+--
+-- TOC entry 4009 (class 0 OID 4409424)
+-- Dependencies: 204
+-- Data for Name: food_feedback; Type: TABLE DATA; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+COPY public.food_feedback (feedback_id, feedback_title, feedback_body, userid, time_stamp) FROM stdin;
+c4cf2	Test	1234567890	10001000	2021-03-07 19:30:00.509413
+28fdc	Test	This is test feedback - Added user id for feedbacks to avoid spam.	10001000	2021-03-07 19:30:00.509413
+8318d	This is a test feedback limita	This is a test	10001000	2021-03-07 19:30:00.509413
+b157d	Test 2	This is another test to check for the dynamic container system for feedback page. This will help the developers to update the form as required without breaking the code. Let’s all hope for a safe testing.\n\nThanks, \nDev Team.	10001000	2021-03-07 19:30:00.509413
+656fc	Test Limitation to 2	20 Chars limit added	10001000	2021-03-08 09:12:21.496367
+46a03	Test Limitation to 2	20 Chars limit added check 2	10001000	2021-03-08 09:12:52.172932
+24c55	very good food	taste is very good.	10001000	2021-03-08 09:23:25.386804
+6caf9	Test	Test Body	10001000	2021-03-21 10:44:46.052417
+\.
+
+
+--
+-- TOC entry 4007 (class 0 OID 3928919)
+-- Dependencies: 202
+-- Data for Name: orders; Type: TABLE DATA; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+COPY public.orders (orderid, userid, cost, payment, orders, completed, time_stamp, order_date, feedback, feedback_status) FROM stdin;
+pay_H7NrUw7x6IOqpO	10001000	140	Paid	{"{\\"dishid\\":\\"10\\",\\"name\\":\\"Misal Pav\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":1}","{\\"dishid\\":\\"4\\",\\"name\\":\\"Idli Sambar\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":1}","{\\"dishid\\":\\"22\\",\\"name\\":\\"Manchurian fried rice\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":1}","{\\"dishid\\":\\"39\\",\\"name\\":\\"Toast Sandwich\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":1}"}	t	2021-05-06 10:31:30.921826	2021-05-06	5	t
+pay_HACEMENLNfeidP	10001000	25	Paid	{"{\\"dishid\\":\\"10\\",\\"name\\":\\"Misal Pav\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":1}"}	f	2021-05-13 13:05:49.966288	2021-05-13	\N	f
+pay_HAH7PN1xiOu25B	10001004	105	Paid	{"{\\"dishid\\":\\"67\\",\\"name\\":\\"Veg  Schezwan Frankie\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":3}"}	f	2021-05-13 17:52:44.241952	2021-05-13	\N	f
+pay_HAdLc25uWuy10K	10001000	135	Paid	{"{\\"dishid\\":\\"44\\",\\"name\\":\\"Bread Butter\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":1}","{\\"dishid\\":\\"43\\",\\"name\\":\\"Club Sandwich\\",\\"itemURL\\":\\"https://odrista.s3.amazonaws.com/y9DpT.jpg\\",\\"quantity\\":2}"}	f	2021-05-14 15:37:25.451162	2021-05-14	\N	f
+\.
+
+
+--
+-- TOC entry 4010 (class 0 OID 7085703)
+-- Dependencies: 205
+-- Data for Name: server_msg; Type: TABLE DATA; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+COPY public.server_msg (msg_title, msg_body, msg_author, msg_time, msg_id, msg_link) FROM stdin;
+Semester End Feedbk	Hello Students,\nAs you know this semester has ended we are circulating this form to give feeback by clicking on the link below.\n	tejasraibagi@gmail.com	2021-03-11 12:48:14.018531	c3228	https://www.google.com/?client=safari
+Sem end s	ahahah 	tejasraibagi@gmail.com	2021-03-11 14:14:44.546581	13e15	\N
+server repeating chk	This is to test if the server messages aee repeating or not!	tejasraibagi@gmail.com	2021-03-11 15:56:09.32338	463c1	\N
+abav	agahav	tejasraibagi@gmail.com	2021-03-11 15:57:32.653109	2a935	\N
+teste	tetsw	tejasraibagi@gmail.com	2021-03-11 16:00:12.420394	942d9	\N
+teste	tetswv	tejasraibagi@gmail.com	2021-03-11 16:00:51.543827	d4b9f	\N
+Food Review Form	This is a form to test the new server messaging system...the form will contain some msg and a link.\n\nPeace,\nDev Team	tejasraibagi@gmail.com	2021-03-12 16:39:11.800717	92691	\N
+Food Feedback 2	This is another test for server messaging system. We’ll be checking for link usability via this message.	tejasraibagi@gmail.com	2021-03-12 16:44:38.577003	ea0cd	\N
+Food Feedback Link	This is a server message to send a link to students to fill form or feed any important information.	tejasraibagi@gmail.com	2021-03-12 16:48:07.147249	efb8d	\N
+Food Feedback	This is a test to check the server messages and provision of the links. Hope it works	tejasraibagi@gmail.com	2021-03-12 16:53:05.291543	8b75b	https://www.google.com
+Moodle Review	Hello students,\nPlease review the canteen by visiting the link	tejasraibagi@gmail.com	2021-03-12 23:04:37.673871	81623	http://moodle.apsit.org.in/moodle/login/index.php
+App Udpate	We have updated and fixed app breaking bugs. It is recommended to all the users to update the app for uninterrupted service.\n\nThanks,\nDev Team.	tejasraibagi@gmail.com	2021-03-13 11:44:35.190991	a02c6	https://www.google.com
+Link Test	does empty link cause app to crash?\nlet's find out!	tejasraibagi@gmail.com	2021-03-16 15:10:05.327007	d7d74	
+test server message	test server body	tejasraibagi@gmail.com	2021-03-21 10:47:28.020793	31f18	
+Welcome To Orderista	Hello Users,\nWe warmly welcome you to our app, wish you have a seemless experience while using the app. In case of any issues or feature requests please use the feedback tab provided.\n\nRegards,\nDev Team!\n	tejasraibagi@gmail.com	2021-03-21 15:00:02.194411	ef0c1	
+\.
+
+
+--
+-- TOC entry 4006 (class 0 OID 3926481)
+-- Dependencies: 201
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+COPY public.users (userid, password, role, email, verified, otp, otp_time, wallet) FROM stdin;
+10001003	$2a$10$kEkQhUbwVXc0c1bjegUAHewX1cGEF/NeD32X5GImQEK5SRFWBueC2	student	tejas2@gmail.com	f	\N	\N	0
+10001004	$2a$10$kEkQhUbwVXc0c1bjegUAHewX1cGEF/NeD32X5GImQEK5SRFWBueC2	student	\N	f	\N	\N	0
+10001000	$2a$10$n9a3iZduHH4m3JGUXxMNrepuE7w05fMsQQyki8Xph0HR0uH1fGGwm	student	tejasraibagi@apsit.edu.in	t	\N	2021-05-13 15:05:41.588848	0
+10001001	$2a$10$kEkQhUbwVXc0c1bjegUAHewX1cGEF/NeD32X5GImQEK5SRFWBueC2	canteen	\N	t	\N	2021-03-10 14:35:20.801368	0
+10001002	$2a$10$kEkQhUbwVXc0c1bjegUAHewX1cGEF/NeD32X5GImQEK5SRFWBueC2	admin	tejasraibagi@gmail.com	t	\N	2021-03-11 10:52:05.494597	0
+\.
+
+
+--
+-- TOC entry 3866 (class 2606 OID 3919997)
+-- Name: Menu Menu_pk; Type: CONSTRAINT; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+ALTER TABLE ONLY public."Menu"
+    ADD CONSTRAINT "Menu_pk" PRIMARY KEY (dishid);
+
+
+--
+-- TOC entry 3872 (class 2606 OID 4409431)
+-- Name: food_feedback food_feedback_pk; Type: CONSTRAINT; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+ALTER TABLE ONLY public.food_feedback
+    ADD CONSTRAINT food_feedback_pk PRIMARY KEY (feedback_id);
+
+
+--
+-- TOC entry 3870 (class 2606 OID 3928926)
+-- Name: orders order_pk; Type: CONSTRAINT; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+ALTER TABLE ONLY public.orders
+    ADD CONSTRAINT order_pk PRIMARY KEY (orderid);
+
+
+--
+-- TOC entry 3874 (class 2606 OID 7096137)
+-- Name: server_msg server_msg_pkey; Type: CONSTRAINT; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+ALTER TABLE ONLY public.server_msg
+    ADD CONSTRAINT server_msg_pkey PRIMARY KEY (msg_id);
+
+
+--
+-- TOC entry 3868 (class 2606 OID 3926488)
+-- Name: users users_pk; Type: CONSTRAINT; Schema: public; Owner: ltaxpvxfnjuqmu
+--
+
+ALTER TABLE ONLY public.users
+    ADD CONSTRAINT users_pk PRIMARY KEY (userid);
+
+
+--
+-- TOC entry 4016 (class 0 OID 0)
+-- Dependencies: 5
+-- Name: SCHEMA public; Type: ACL; Schema: -; Owner: ltaxpvxfnjuqmu
+--
+
+REVOKE ALL ON SCHEMA public FROM postgres;
+REVOKE ALL ON SCHEMA public FROM PUBLIC;
+GRANT ALL ON SCHEMA public TO ltaxpvxfnjuqmu;
+GRANT ALL ON SCHEMA public TO PUBLIC;
+
+
+--
+-- TOC entry 4017 (class 0 OID 0)
+-- Dependencies: 652
+-- Name: LANGUAGE plpgsql; Type: ACL; Schema: -; Owner: postgres
+--
+
+GRANT ALL ON LANGUAGE plpgsql TO ltaxpvxfnjuqmu;
+
+
+-- Completed on 2021-05-17 14:24:36 IST
+
+--
+-- PostgreSQL database dump complete
+--
+

@@ -1,0 +1,65 @@
+name,category,foodid
+Upma,Breakfast,1
+Poha,Breakfast,2
+Medu Wada,Breakfast,3
+Idli Sambar,Breakfast,4
+Masala Dosa,Breakfast,5
+Mysore Masala Dosa,Breakfast,6
+Mysore Dosa,Breakfast,7
+Dosa,Breakfast,8
+Vada Pav,Breakfast,9
+Misal Pav,Breakfast,10
+Maggie,Breakfast,11
+Vada Misal,Breakfast,12
+Onion Uttappa,Breakfast,13
+Tomato Uttappa,Breakfast,14
+Pani Puri,Chaat,15
+Ragda Puri,Chaat,16
+Dahi Puri,Chaat,17
+Shev Puri,Chaat,18
+Sukka Bhel Puri,Chaat,19
+Gila Bhel Puri,Chaat,20
+Veg fried rice,Chinese,21
+Manchurian fried rice,Chinese,22
+Schezwan fried rice,Chinese,23
+Shelpa rice,Chinese,24
+Triple schezwan rice,Chinese,25
+Hakka noodles,Chinese,26
+manchurian Hakka noodles,Chinese,27
+Triple schezwan Hakka noodle,Chinese,28
+Manchow Soup,Chinese,29
+Manchurian Balls,Chinese,30
+Chinese Bhel,Chinese,31
+Dal Rice,Lunch,32
+Masala Rice,Lunch,33
+Lunch Plate,Lunch,34
+Chole Puri,Lunch,35
+Dal Khichadi,Lunch,36
+Pav Bhaji,Lunch,37
+Veg Sandwich,Sandwich,38
+Toast Sandwich,Sandwich,39
+Grilled Sandwich,Sandwich,40
+Cheese Sandwich,Sandwich,41
+Mayonnaise Sandwich,Sandwich,42
+Club Sandwich,Sandwich,43
+Bread Butter,Sandwich,44
+Masala Sandwich,Sandwich,45
+Jam Bread,Sandwich,46
+Cheese Mayonnaise Sandwich,Sandwich,47
+Grilled cheese Mayonnaise Sandwich,Sandwich,48
+Veg Frankie,Frankie,66
+Veg  Schezwan Frankie,Frankie,67
+Veg Paneer Frankie,Frankie,68
+Veg Paneer Cheese Frankie,Frankie,69
+Veg Paneer Schezwan Frankie,Frankie,70
+Veg cheese Frankie,Frankie,71
+Veg Noodle Frankie,Frankie,72
+Veg Noodle cheese Frankie,Frankie,73
+Veg Noodle Manchurian Frankie,Frankie,74
+Veg Noodle Mayonnaise Frankie,Frankie,75
+Veg Overload Frankie,Frankie,76
+Veg Manchurian Frankie,Frankie,77
+Veg manchurian cheese Frankie,Frankie,78
+Veg Schezwan Manchurian Frankie ,Frankie,79
+Veg Paneer cheese Mayonnaise Frankie,Frankie,80
+Veg Noodle cheese Mayonnaise Frankie,Frankie,81

@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "/Users/tejas/Documents/Projects/App Development/Orderista/Orderista/build/razorpay_flutter/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_disabled.xml",
+        "source": "/Users/tejas/.gradle/caches/transforms-2/files-2.1/d115430b01567f75290645169026f953/jetified-play-services-auth-17.0.0/res/drawable-watch-v20/common_google_signin_btn_text_disabled.xml"
+    },
+    {
+        "merged": "/Users/tejas/Documents/Projects/App Development/Orderista/Orderista/build/razorpay_flutter/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml",
+        "source": "/Users/tejas/.gradle/caches/transforms-2/files-2.1/d115430b01567f75290645169026f953/jetified-play-services-auth-17.0.0/res/drawable-watch-v20/common_google_signin_btn_text_dark_normal.xml"
+    },
+    {
+        "merged": "/Users/tejas/Documents/Projects/App Development/Orderista/Orderista/build/razorpay_flutter/intermediates/res/merged/release/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml",
+        "source": "/Users/tejas/.gradle/caches/transforms-2/files-2.1/d115430b01567f75290645169026f953/jetified-play-services-auth-17.0.0/res/drawable-watch-v20/common_google_signin_btn_text_light_normal.xml"
+    }
+]

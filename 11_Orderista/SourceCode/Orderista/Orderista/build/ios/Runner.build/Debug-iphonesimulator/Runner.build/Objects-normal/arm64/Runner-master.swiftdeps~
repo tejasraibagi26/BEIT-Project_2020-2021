@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)"
+options: "1a7cb25a49948c24f8b556757910a55a"
+build_time: [1619938591, 228567000]
+inputs:
+  "/Users/tejas/Documents/Projects/App Development/Orderista/Orderista/ios/Runner/AppDelegate.swift": [1615553246, 416756852]

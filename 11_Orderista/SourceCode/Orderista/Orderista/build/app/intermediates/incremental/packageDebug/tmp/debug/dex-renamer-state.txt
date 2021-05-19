@@ -1,0 +1,4 @@
+#Tue Mar 16 14:54:23 IST 2021
+base.0=/Users/tejas/Documents/Projects/App Development/Orderista/Orderista/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
