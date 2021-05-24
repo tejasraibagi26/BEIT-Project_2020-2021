@@ -6,10 +6,12 @@ import 'package:orderista/Root/root_app.dart';
 import 'package:orderista/Common/EmailVerfication.dart';
 import 'package:orderista/Common/forgot_pass.dart';
 import 'package:orderista/Common/welcome_screen.dart';
+import 'package:orderista/Screens/Wallet.dart';
 import 'package:orderista/constants.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:orderista/main.dart';
+import 'package:orderista/module/http.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:flutter_sfsymbols/flutter_sfsymbols.dart';
@@ -23,21 +25,20 @@ class _ProfileState extends State<Profile> {
   var userID = "";
   var email = "";
   String msg = "";
+  var wallet = "";
 
   bool isDarkModeEnabled = false;
   bool isDarkMode = false;
   bool isVerifying = false;
   bool isOTPSent = false;
-
-  TextEditingController _email = new TextEditingController();
-  TextEditingController _otp = new TextEditingController();
-  final _formKey = GlobalKey<FormState>();
+  bool isWaiting = true;
 
   @override
   void initState() {
     super.initState();
     getPrefs();
     getTheme();
+    getWalletInfo();
   }
 
   void getPrefs() async {
@@ -76,156 +77,17 @@ class _ProfileState extends State<Profile> {
     });
   }
 
-  void sendOTP() async {}
-
-  void verifyOTP() async {}
-
-  void emailScreen() {
-    showDialog(
-        context: context,
-        builder: (context) {
-          return AlertDialog(
-            insetPadding: EdgeInsets.all(10.0),
-            scrollable: true,
-            backgroundColor: isDarkMode ? cardColorDark : cardColorLight,
-            title: Text(
-              "Email",
-              style: TextStyle(
-                color: isDarkMode ? textColorDark : textColorLight,
-                fontSize: textBodySize,
-              ),
-            ),
-            actions: <Widget>[],
-            content: StatefulBuilder(
-              builder: (context, setState) {
-                return Container(
-                  height: isOTPSent ? 200 : 155,
-                  width: MediaQuery.of(context).size.width,
-                  child: Column(
-                    children: [
-                      Form(
-                        key: _formKey,
-                        child: Column(
-                          children: [
-                            TextFormField(
-                              style: TextStyle(
-                                  color:
-                                      isDarkMode ? Colors.white : Colors.black),
-                              controller: _email,
-                              keyboardType: TextInputType.emailAddress,
-                              decoration: InputDecoration(
-                                prefixIcon: Icon(
-                                  SFSymbols.envelope_fill,
-                                  color: isDarkMode
-                                      ? iconColorDark
-                                      : iconColorLight,
-                                  size: 22,
-                                ),
-                                hintText: "Enter Email",
-                                hintStyle: TextStyle(
-                                  color: isDarkMode
-                                      ? textColorDark.withOpacity(0.6)
-                                      : textColorLight.withOpacity(0.6),
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w500,
-                                ),
-                                focusedBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: isDarkMode
-                                          ? Colors.white
-                                          : Colors.black),
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            isOTPSent
-                                ? TextFormField(
-                                    style: TextStyle(
-                                        color: isDarkMode
-                                            ? Colors.white
-                                            : Colors.black),
-                                    controller: _otp,
-                                    decoration: InputDecoration(
-                                      prefixIcon: Icon(
-                                        SFSymbols.lock_fill,
-                                        color: isDarkMode
-                                            ? iconColorDark
-                                            : iconColorLight,
-                                        size: 22,
-                                      ),
-                                      hintText: "Enter OTP",
-                                      hintStyle: TextStyle(
-                                        color: isDarkMode
-                                            ? textColorDark.withOpacity(0.6)
-                                            : textColorLight.withOpacity(0.6),
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w500,
-                                      ),
-                                      focusedBorder: UnderlineInputBorder(
-                                        borderSide: BorderSide(
-                                            color: isDarkMode
-                                                ? Colors.white
-                                                : Colors.black),
-                                      ),
-                                    ),
-                                  )
-                                : Container(),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      GestureDetector(
-                        onTap: () {
-                          isOTPSent ? verifyOTP() : sendOTP();
-                        },
-                        child: Container(
-                          alignment: Alignment.center,
-                          width: MediaQuery.of(context).size.width * 0.8,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(9),
-                            color: Colors.black,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Colors.black12.withOpacity(.2),
-                                  blurRadius: 20,
-                                  offset: Offset(0, 10)),
-                            ],
-                          ),
-                          child: !isVerifying
-                              ? Text(
-                                  isOTPSent ? "VERIFY" : "SEND OTP",
-                                  style: TextStyle(
-                                      letterSpacing: 2.0,
-                                      color: Colors.white,
-                                      fontSize: textBodySize,
-                                      fontWeight: FontWeight.w500),
-                                  textAlign: TextAlign.center,
-                                )
-                              : isDarkMode
-                                  ? spinkitDark
-                                  : spinkit,
-                        ),
-                      ),
-                      SizedBox(
-                        height: 5,
-                      ),
-                      Text(
-                        this.msg,
-                        style: TextStyle(
-                            color: isDarkMode ? textColorDark : textColorLight),
-                      ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          );
-        });
+  void getWalletInfo() async {
+    if (this.mounted) {
+      print(prefs.getString("userID"));
+      var data = {"userid": int.parse(prefs.getString("userID"))};
+      var res = await httpPost("api/v1/wallet/wallet_info", data);
+      print(res["data"][0]["wallet"]);
+      setState(() {
+        wallet = res["data"][0]["wallet"].toString();
+        isWaiting = false;
+      });
+    }
   }
 
   @override
@@ -302,11 +164,15 @@ class _ProfileState extends State<Profile> {
                 SizedBox(height: 10),
                 GestureDetector(
                   onTap: () {
-                    const snackbar = SnackBar(
-                      content: Text("Wallet under maintenance"),
-                      duration: Duration(seconds: 1),
-                    );
-                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                    Navigator.of(context).push(CupertinoPageRoute(
+                        builder: (context) => Wallet(
+                              wallet: wallet.toString(),
+                            )));
+                    // const snackbar = SnackBar(
+                    //   content: Text("Wallet under maintenance"),
+                    //   duration: Duration(seconds: 1),
+                    // );
+                    // ScaffoldMessenger.of(context).showSnackBar(snackbar);
                     // Fluttertoast.showToast(
                     //     msg: "Wallet is under maintenance",
                     //     fontSize: textBodySize,
@@ -321,23 +187,55 @@ class _ProfileState extends State<Profile> {
                     height: 50,
                     width: size.width,
                     child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Icon(
-                          SFSymbols.money_dollar,
-                          size: textHeaderSize,
-                          color: isDarkMode ? iconColorDark : iconColorLight,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "Wallet",
-                          style: TextStyle(
+                        Row(
+                          children: [
+                            Icon(
+                              SFSymbols.money_dollar,
+                              size: textHeaderSize,
                               color:
-                                  isDarkMode ? textColorDark : textColorLight,
-                              fontSize: textBodySize,
-                              fontWeight: FontWeight.w500),
+                                  isDarkMode ? iconColorDark : iconColorLight,
+                            ),
+                            SizedBox(
+                              width: 10,
+                            ),
+                            Text(
+                              "Wallet",
+                              style: TextStyle(
+                                  color: isDarkMode
+                                      ? textColorDark
+                                      : textColorLight,
+                                  fontSize: textBodySize,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                          ],
                         ),
+                        Row(
+                          children: [
+                            !isWaiting
+                                ? Text(
+                                    "Rs. $wallet",
+                                    style: TextStyle(
+                                      color: isDarkMode
+                                          ? textColorDark
+                                          : textColorLight,
+                                      fontSize: textBodySize,
+                                    ),
+                                  )
+                                : isDarkMode
+                                    ? spinkit
+                                    : spinkitDark,
+                            SizedBox(
+                              width: 5,
+                            ),
+                            Icon(
+                              SFSymbols.chevron_right,
+                              color:
+                                  isDarkMode ? iconColorDark : iconColorLight,
+                            )
+                          ],
+                        )
                       ],
                     ),
                   ),

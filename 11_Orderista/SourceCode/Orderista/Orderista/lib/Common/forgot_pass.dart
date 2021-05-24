@@ -4,13 +4,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_sfsymbols/flutter_sfsymbols.dart';
 import 'package:orderista/Common/Banner.dart';
 import 'package:orderista/Common/ChangePass.dart';
-import 'package:orderista/Provider/Cart.dart';
-import 'package:orderista/Provider/Menu.dart';
 import 'package:orderista/ReusableComponent/HeaderTitle.dart';
-import 'package:orderista/Root/root_app.dart';
 import 'package:orderista/Module/http.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../constants.dart';
@@ -319,8 +315,8 @@ class _ForgotPasswordState extends State<ForgotPassword> {
                         ]),
                     child: isWaiting
                         ? isDarkMode
-                            ? spinkitDark
-                            : spinkit
+                            ? spinkit
+                            : spinkitDark
                         : Text(
                             isOTPSent ? "Verify" : "Send OTP",
                             style: TextStyle(

@@ -20,6 +20,7 @@ const Feedback = require("./routes/api/Feedback");
 const Message = require("./routes/api/Messages");
 const Ai = require("./routes/api/AI");
 const Recommeder = require("./routes/api/Recommender");
+const Wallet = require("./routes/api/Wallet");
 const { pdb } = require("./db_init/dbConn");
 
 // initialize express app
@@ -85,6 +86,7 @@ app.use("/api/v1/feedback", Feedback);
 app.use("/api/v1/message", Message);
 // app.use("/api/v1/ai", Ai);
 app.use("/api/v1/ai", Recommeder);
+app.use("/api/v1/wallet", Wallet);
 // app.use("/api/v1/<...>", auth, Media);
 
 // error handling middleware

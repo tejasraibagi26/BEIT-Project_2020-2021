@@ -17,7 +17,6 @@ class Favourites extends StatefulWidget {
 }
 
 class _FavouritesState extends State<Favourites> {
-  List<Food> _foods = [];
   String userID;
   bool isDarkMode = false;
   bool isFavsChanged = false;

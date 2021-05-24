@@ -8,7 +8,7 @@ import 'package:orderista/Screens/homepage.dart';
 import 'package:orderista/Screens/Cart.dart';
 import 'package:orderista/Screens/order_page.dart';
 import 'package:orderista/Screens/profile.dart';
-import 'package:orderista/Test_Screens/Test_AI.dart';
+import 'package:orderista/Screens/AI.dart';
 import 'package:orderista/constants.dart';
 import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +30,7 @@ class _RootState extends State<Root> {
     Favourites(),
     OrderHistory(),
     CartPage(),
-    TestAIRecco(),
+    AIRecco(),
     Profile(),
     OrderPage(),
     FeedbackPage()

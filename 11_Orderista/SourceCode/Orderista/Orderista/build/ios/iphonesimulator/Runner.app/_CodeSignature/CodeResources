@@ -86,7 +86,7 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
-		I0m+9sbDYPCvheNGVL3Wd/+05i8=
+		wiVrpZH/N6nXt8cRsYwczLlqQg0=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
 		<data>
@@ -94,11 +94,11 @@
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib</key>
 		<data>
-		KYK8Qn/Eb4OAY9pWkJESbQFRrZs=
+		5GJ3j+HnrbBBt1rvYjgWejFHnQY=
 		</data>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<data>
-		GMWDTmCdxUeFeax/RRe5dQfesVk=
+		0Bk6SNCi7xOdg3Llc47DNlpnFmo=
 		</data>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
@@ -106,11 +106,11 @@
 		</data>
 		<key>Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib</key>
 		<data>
-		AvNHSDKX1rSGUUTVXlo/0DFAczw=
+		R7QTJylJf6d1N3NlvPn8DEYN7Mc=
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		5/uomsHd6vOmMNeXrQCab0/skUA=
+		imodM/Co7RijlmNDKsPyQaZllbo=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -118,7 +118,7 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		sbo9bG+jBuzSQzvOaLZ7QA6Nkhg=
+		gG6DgdfiAUY0zWXRNQlmLKPGjCE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/.env</key>
 		<data>
@@ -178,7 +178,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		QS/y+wIH1dDMhQPteD3P8ivHmsM=
+		c0VnoBo1v0r/9rqOXbgGgT5g2fY=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -234,11 +234,11 @@
 		</data>
 		<key>Frameworks/Pods_Runner.framework/Pods_Runner</key>
 		<data>
-		LxGHmYIcU63cjqvb74ALKo/CPuA=
+		rxj0jcFJcRw+6lfdWlqvUjybGP0=
 		</data>
 		<key>Frameworks/Pods_Runner.framework/_CodeSignature/CodeDirectory</key>
 		<data>
-		qXRNAPbf+GL7EGuU/sFZ3c4g5cQ=
+		JLPNd6JjBeQ/mpKwagEpA4tYlnM=
 		</data>
 		<key>Frameworks/Pods_Runner.framework/_CodeSignature/CodeRequirements</key>
 		<data>
@@ -246,7 +246,7 @@
 		</data>
 		<key>Frameworks/Pods_Runner.framework/_CodeSignature/CodeRequirements-1</key>
 		<data>
-		hTJTwsbyCmrxQ6hUDDvblzVKb3c=
+		ze8vkAZUrhpNzoW2JH7WxJj7g58=
 		</data>
 		<key>Frameworks/Pods_Runner.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -310,7 +310,7 @@
 		</data>
 		<key>Frameworks/Toast.framework/Toast</key>
 		<data>
-		gxwJCrJWbXfWyevLdDKRjsjb7P4=
+		hD7VyQV0QoMGuSKGc5s2YbnhC8s=
 		</data>
 		<key>Frameworks/Toast.framework/_CodeSignature/CodeResources</key>
 		<data>
@@ -326,7 +326,7 @@
 		</data>
 		<key>Frameworks/flutter_barcode_scanner.framework/flutter_barcode_scanner</key>
 		<data>
-		XeG9/9WTpOBseRIl1uEK0Pq4BFM=
+		hS+cFrXlCdezZHBlVQo4PK8zbjU=
 		</data>
 		<key>Frameworks/flutter_socket_io.framework/Info.plist</key>
 		<data>
@@ -338,7 +338,7 @@
 		</data>
 		<key>Frameworks/flutter_socket_io.framework/flutter_socket_io</key>
 		<data>
-		4roXA660E4eVJ91Ez7V7ETgWhbc=
+		LWqPSp6T0saXFtQJ3yPDDKZER+M=
 		</data>
 		<key>Frameworks/fluttertoast.framework/Info.plist</key>
 		<data>
@@ -350,7 +350,7 @@
 		</data>
 		<key>Frameworks/fluttertoast.framework/fluttertoast</key>
 		<data>
-		L2u9zuQMYEKfOpbMwvJlhAvLMDg=
+		EcBboTFG/aYFqhfv3qD7MEuDVD8=
 		</data>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
 		<data>
@@ -430,7 +430,7 @@
 		</data>
 		<key>Frameworks/razorpay_flutter.framework/razorpay_flutter</key>
 		<data>
-		03F/BaMR/ZCmT/V6PI65OCu1StQ=
+		xajSDRdRb7NCsNAFbO+XK/cJQHs=
 		</data>
 		<key>Frameworks/shared_preferences.framework/Info.plist</key>
 		<data>
@@ -442,7 +442,7 @@
 		</data>
 		<key>Frameworks/shared_preferences.framework/shared_preferences</key>
 		<data>
-		hzYelhtCt/TzaC65kbGa4zBhi/0=
+		IiIsyMARvqp6CSQ+tNCUZ4j3kaA=
 		</data>
 		<key>Frameworks/url_launcher.framework/Info.plist</key>
 		<data>
@@ -454,7 +454,7 @@
 		</data>
 		<key>Frameworks/url_launcher.framework/url_launcher</key>
 		<data>
-		j0TGLha0esoAj3U7gw9+KR3OAug=
+		X/2AMVhD1lNJ1jdp2j//3XUkh1w=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -611,7 +611,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zno3hXyRjm9Iqf1lCiGd/sLP0PKdJN1djqU7Oxds1YM=
+			KyYYTOGAvQRUzxItpZ68EoBUUZVwhbIHmKI1nEK+9T0=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/Info.plist</key>
@@ -625,14 +625,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zG0LZyTZU0V+2zJmdJSOGqQKsaP3AbD+/44+fTY2PcU=
+			9ysvCvFbiMbFfFYXzbrmhUnJrRHkFgJBAgNbDX0VNPU=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sYDb42GO4heFxEbKpZl2vxvtVLZfjfbpF0Xs8sInW2w=
+			4C9e2aJiDdosxRPsbwNt+eXg6fpTQm6UUENm8jaoZXY=
 			</data>
 		</dict>
 		<key>Base.lproj/Main.storyboardc/Info.plist</key>
@@ -646,14 +646,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RIWVWueDOcN11gvdY1cEs5huGR77amwa081JOlT6Yuw=
+			T2LtxMFRHfdCMTWHZXpD7wnbwBCkMVPuYwOqBWzurWQ=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/App</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XKRKtlkeFgRSsV8U2EiLphhUXANFJBBS5RANtqzJMw8=
+			8NEODVyfOVfIw2PU0HIEQcCjFmxqWwSeMDaXYgmkBkk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -667,7 +667,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9H3ozpwF5R9TGkLgBpnSy/sdMDgI8+T/rcuKPdA8OSg=
+			bdtrLQfVb4tfV7zczFqRhZPmFBFTf+JDtEusqzvUR0Q=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/.env</key>
@@ -772,7 +772,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			EO9qCxNZYPvbMkwwds0OQ906lFX5yJiidqYK0yWLWqE=
+			13jxtB3BBQD08yAeGu0GMqQeYsHM5PY2LTT7ovUaaqM=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
@@ -870,14 +870,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9YkC6mbSgON3KylyR2r0Yh1zszc9KTd72O1VakNEzZo=
+			MdKqXljSA29/pzK5Qylf02GDk9c+RF9RvAdhPRHAZA4=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_Runner.framework/_CodeSignature/CodeDirectory</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3cvoI+UMUnqNWm4zsbb7wiCdGrzNp/USUKhhPh5YS8w=
+			mlBBXFsP/hst7zXGl/cc550Uh7AdNIGHk9q1Rthqa0w=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_Runner.framework/_CodeSignature/CodeRequirements</key>
@@ -891,7 +891,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			mpNgwZZaZq+QCzNJ76umn7kBY21i1o1TLsn4Cak1jFw=
+			ZZlvaRTvNtGaP85E+nSSlBWP+bJG/+uRWoDJsYZjvus=
 			</data>
 		</dict>
 		<key>Frameworks/Pods_Runner.framework/_CodeSignature/CodeResources</key>
@@ -1003,7 +1003,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			K65ZM776olgxSYCKnGIBWdMS0yBC9XlFralbUW5vAso=
+			9p+u/ZQNHXwRHcXE+Kuy3OKZc8Z1T4tItblJLbtaPU0=
 			</data>
 		</dict>
 		<key>Frameworks/Toast.framework/_CodeSignature/CodeResources</key>
@@ -1031,7 +1031,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			JSmF69dZX8gzPb5p3Nln8gjRYSw9+7zeYnrBomwWJeY=
+			AlL0wzH8FdASmCsj9y+UlfkGOpCTjrnoM+CEPTNC1uc=
 			</data>
 		</dict>
 		<key>Frameworks/flutter_socket_io.framework/Info.plist</key>
@@ -1052,7 +1052,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			m3fBeEYony64HpJq0ZwtxZtku4Vb0GF74NxfrtyQmyo=
+			Hc21mJB98fkH2ngdGHaqcn4vTcSdz8f37xkXm1tfZj8=
 			</data>
 		</dict>
 		<key>Frameworks/fluttertoast.framework/Info.plist</key>
@@ -1073,7 +1073,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rZijum9VQIIaT/mSLgGAGMc0MkvlYx1y+Tfox4TAyP4=
+			zFoHz7CvdHi0Iqyi8P6GPgdq+y4xfpa1peBtOEY1Zoc=
 			</data>
 		</dict>
 		<key>Frameworks/libswiftAVFoundation.dylib</key>
@@ -1213,7 +1213,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			rOAPJ4XECSHeu9lKNqKX9JBwprFdr9Uu+hbuvYqnsZk=
+			fKVNdsYoFaXrFspmv38shltcVN+HROgt9nViX3EwzaI=
 			</data>
 		</dict>
 		<key>Frameworks/shared_preferences.framework/Info.plist</key>
@@ -1234,7 +1234,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RvBBwigmAJhm115aSn9OrG9hDmBiFceysxiOSTNN20s=
+			UugFdCiFpQ9S3eCD++Lq0T0hd5SR02e9H8C1rBZ7MCI=
 			</data>
 		</dict>
 		<key>Frameworks/url_launcher.framework/Info.plist</key>
@@ -1255,7 +1255,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aK06Uc9uHNu/rU+pCWQafTEgqd8Ohe5xocXBmd8NQSA=
+			RyEGOE411kGLjNCXQNfcVcVPlj7XR2eyhX/fODfdNW4=
 			</data>
 		</dict>
 	</dict>

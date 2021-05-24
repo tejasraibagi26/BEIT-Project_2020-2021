@@ -123,7 +123,8 @@ class _CartPageState extends State<CartPage> {
       "time_stamp": DateTime.now().toString(),
       "date": DateTime.now().toString().split(" ")[0]
     };
-    var orderFood = await httpPost('api/v1/order/add-order', data);
+
+    await httpPost('api/v1/order/add-order', data);
 
     Navigator.push(
         context,

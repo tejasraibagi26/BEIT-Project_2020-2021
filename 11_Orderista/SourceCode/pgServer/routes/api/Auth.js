@@ -134,24 +134,36 @@ router.post("/change-password", async (req, res, next) => {
 
 //Mailer
 var nodemailer = require("nodemailer");
+const { google } = require("googleapis");
 
-var transport = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 465,
-  secure: true,
-  auth: {
-    type: "OAuth2",
-    user: process.env.SENDER_EMAIL_ADDRESS,
-    clientId: process.env.MAILING_SERVICE_CLIENT_ID,
-    clientSecret: process.env.MAILING_SERVICE_CLIENT_SECRET,
-    refreshToken: process.env.MAILING_SERVICE_REFRESH_TOKEN,
-    accessToken: process.env.ACCESS_TOKEN,
-  },
+const oAuth2Client = new google.auth.OAuth2(
+  process.env.MAILING_SERVICE_CLIENT_ID,
+  process.env.MAILING_SERVICE_CLIENT_SECRET,
+  process.env.REDIRECT_URL
+);
+
+oAuth2Client.setCredentials({
+  refresh_token: process.env.MAILING_SERVICE_REFRESH_TOKEN,
 });
 
 //Send OTP Route
 // Data Required - OTP, OTP_TIME (Time when OTP was generated) and Email
 router.post("/send-otp", async (req, res, next) => {
+  const accessToken = await oAuth2Client.getAccessToken();
+
+  var transport = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      type: "OAuth2",
+      user: process.env.SENDER_EMAIL_ADDRESS,
+      clientId: process.env.MAILING_SERVICE_CLIENT_ID,
+      clientSecret: process.env.MAILING_SERVICE_CLIENT_SECRET,
+      refreshToken: process.env.MAILING_SERVICE_REFRESH_TOKEN,
+      accessToken: accessToken,
+    },
+  });
   //Generate Random OTP
   var otpGen = Math.random();
   otpGen = otpGen * 1000000;
@@ -167,7 +179,7 @@ router.post("/send-otp", async (req, res, next) => {
       req.body.reason +
       " is - </h3><h1 style = font-weight:'bold';>" +
       otp +
-      "</h1> <p style = font-weight:'bold'; font-style:'italic'>Valid till midnight</p>",
+      "</h1> <p>Valid till midnight</p>",
   };
 
   const query_email =

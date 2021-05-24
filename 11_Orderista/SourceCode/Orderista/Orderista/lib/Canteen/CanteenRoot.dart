@@ -1,3 +1,4 @@
+import 'package:orderista/Admin/AdminFeedback.dart';
 import 'package:orderista/Canteen/CanteenAnalytics.dart';
 import 'package:orderista/Canteen/CanteenHome.dart';
 import 'package:orderista/Canteen/CanteenProfile.dart';
@@ -21,7 +22,11 @@ class _CanteenRootState extends State<CanteenRoot> {
   bool isDarkMode = false;
   SharedPreferences prefs;
 
-  final List<Widget> pages = [CanteenHome(), CanteenAnalytics()];
+  final List<Widget> pages = [
+    CanteenHome(),
+    AdminFeedbackViewPage(),
+    CanteenAnalytics()
+  ];
 
   @override
   void initState() {
@@ -47,6 +52,7 @@ class _CanteenRootState extends State<CanteenRoot> {
 
   List activeTabs = [
     SFSymbols.house_fill,
+    SFSymbols.envelope_fill,
     SFSymbols.chart_bar_alt_fill,
   ];
 

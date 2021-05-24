@@ -63,7 +63,7 @@ class _ChangePasswordState extends State<ChangePassword> {
         "userid": int.parse(prefs.getString("userID"))
       };
 
-      var res = await httpPost('api/v1/auth/change-password', data);
+      await httpPost('api/v1/auth/change-password', data);
 
       setState(() {
         isLoading = false;

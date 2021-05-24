@@ -13,19 +13,10 @@ def hello():
     return "Hello World."
 
 
-@app.route("/c1", methods=["GET"])
-def c1():
-    menu_df = pd.read_csv('AI_Data.csv')
-    rating_df = pd.read_csv('FoodRating.csv')
-    df = pd.merge(rating_df, menu_df, on='foodid')
-    rating_features_df = df.pivot_table(
-        index='name', columns='userid', values='rating').fillna(0)
-    print(rating_features_df)
-    return "menu_df[0]"
-
-
-@app.route("/recommend", methods=["POST"])
+@app.route("/recommend", methods=["POST", "GET"])
 def recommendation():
+    print(request.json["itemId"])
+    itemId = request.json["itemId"]
     try:
         menu_df = pd.read_csv('AI_Data.csv')
         rating_df = pd.read_csv('FoodRating.csv')
@@ -39,7 +30,6 @@ def recommendation():
 
         def recommend(index):
             query_index = index
-            print(query_index)
             distances, indices = model_knn.kneighbors(
                 rating_features_df.iloc[query_index, :].values.reshape(1, -1), n_neighbors=4)
             rating_features_df.head()
@@ -52,10 +42,12 @@ def recommendation():
                 else:
                     recos.append(
                         rating_features_df.index[indices.flatten()[i]])
+                    # print(recos)
+                    # print('{0}: {1}, with distance of {2}:'.format(i, rating_features_df.index[indices.flatten()[i]], distances.flatten()[i]))
 
             return recos
 
-        reco = recommend(10)
+        reco = recommend(int(itemId))
 
         return jsonify({
             "recommendation": reco,
@@ -65,3 +57,7 @@ def recommendation():
         return jsonify({
             "error": e
         })
+
+
+if __name__ == '__main__':
+    app.run(debug=True)

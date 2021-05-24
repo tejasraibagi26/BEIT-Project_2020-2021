@@ -101,7 +101,7 @@ class _FoodItemState extends State<FoodItem> {
       }
       if (favs["favs"] && shouldSetFav) {
         var removeData = {"userid": userid, "itemName": itemName};
-        var favs = await httpPost("api/v1/fav/remove-favs", removeData);
+        await httpPost("api/v1/fav/remove-favs", removeData);
         if (this.mounted) {
           setState(() {
             isFav = false;

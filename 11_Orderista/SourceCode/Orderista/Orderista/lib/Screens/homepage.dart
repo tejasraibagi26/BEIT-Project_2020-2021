@@ -198,7 +198,7 @@ class _HomePageState extends State<HomePage> {
                       'orderid': orderid,
                       'rating': rating,
                     };
-                    var result = await httpPost('api/v1/feedback/rating', data);
+                    await httpPost('api/v1/feedback/rating', data);
                     Navigator.of(context).pop();
                   },
                 ),
